@@ -6,8 +6,11 @@ PIPENV="$WEBSITE_DIR/env/bin/pip"
 echo '============ pull from git:'
 cd $WEBSITE_DIR
 sudo git pull
+echo '============ install requirements.txt:'
 $PIPENV install -r $WEBSITE_DIR/requirements.txt
+echo '============ migrate:'
 $PENV $WEBSITE_DIR/website/manage.py migrate
+echo '============ update supervisor:'
 sudo supervisorctl update
 sudo supervisorctl restart local_webserver
 sudo supervisorctl status
