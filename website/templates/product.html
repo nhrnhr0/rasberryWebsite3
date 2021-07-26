@@ -1,0 +1,88 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'product/css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+
+        <div class="header">
+            <div class="logo"><img src="{%static 'product/imgs/md-removebg.png'%}" alt="מ.ד אספה טכנית"></div>
+            <div class="logo"><img src="{%static 'product/imgs/logo_ms.png'%}" alt="אמ. אס. גלובל"></div>
+        </div>
+        <div class="content">
+            {% if data == None %}
+                ברקוד לא נמצא במערכת
+            {%else%}
+            <div class="details">
+                <h1 class="title">{{data.data.catalog_images.0.title}}</h1>
+                <hr>
+                <div class="product-properties">
+                    <div class="product-color-wraper">
+                        <div class="product-color ">
+                            {%for clr in data.data.catalog_images.0.colors %}
+                                <div class="color-box" title="{{clr.name}}" alt="{{clr.name}}" style="background: {{clr.color}};">{{name}}</div>
+                            {%endfor%}
+                        </div>
+                    </div>
+                    <div class="product-size-wraper">
+                        <div class="product-size">
+                        {%for size in data.data.catalog_images.0.sizes %}
+                            <div class="size-box">{{size}}</div>
+                        {%endfor%}
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div id="description" class="description">
+            </div>
+                
+            </div>
+            <div class="product-img-wraper">
+                <img class="product-img" src="{{data.data.catalog_images.0.image}}" alt="">
+            </div>
+            {%endif%}
+        </div>
+        <div class="fotter">
+
+        </div>
+    </div>
+        <!--
+            <table>
+
+            {%for key, value in data.data.items %}
+            <tr>
+                {%if key == 'catalog_images'%}
+                <table>
+                    {%for d in value %}
+                        {%for key2, val2 in d.items %}
+                        <tr>
+                            <td>{{key2}}</td><td>{{val2}}</td>
+                        </tr>
+                        {%endfor%}
+                        
+                    {%endfor%}
+                </table>
+                {%else%}
+                    <td>{{key}}</td><td>{{value}}</td>
+                {%endif%}
+            </tr>
+            {%endfor%}
+        </table>
+-->
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script>
+            var data = `{{data.data.catalog_images.0.description}}`
+            console.log(data);
+            document.getElementById('description').innerHTML = marked(data);
+          </script>
+</body>
+</html>
