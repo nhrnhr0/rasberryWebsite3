@@ -12,7 +12,7 @@ def home_view(request):
 
 
 
-from core.models import CacheBarcode
+from core.models import CacheBarcode,BarcodeScanHit
 def product_view(request, barcode):
     cached = CacheBarcode.objects.filter(barcode=barcode)
     barcode_data = None
@@ -33,6 +33,7 @@ def product_view(request, barcode):
             print('product: ', barcode_data.barcode, ' found in cached but updated')
         else:
             print('product: ', barcode_data.barcode, ' found and used from cached')
+    print(BarcodeScanHit.objects.create(barcode=barcode_data))
     return render(request, 'product.html', {'data':barcode_data})
 
 

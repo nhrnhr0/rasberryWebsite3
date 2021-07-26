@@ -53,31 +53,6 @@
 
         </div>
     </div>
-        <!--
-            <table>
-
-            {%for key, value in data.data.items %}
-            <tr>
-                {%if key == 'catalog_images'%}
-                <table>
-                    {%for d in value %}
-                        {%for key2, val2 in d.items %}
-                        <tr>
-                            <td>{{key2}}</td><td>{{val2}}</td>
-                        </tr>
-                        {%endfor%}
-                        
-                    {%endfor%}
-                </table>
-                {%else%}
-                    <td>{{key}}</td><td>{{value}}</td>
-                {%endif%}
-            </tr>
-            {%endfor%}
-        </table>
--->
-        
-
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
         <script>
             var data = `{{data.data.catalog_images.0.description}}`
