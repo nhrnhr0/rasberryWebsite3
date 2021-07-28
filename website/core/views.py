@@ -4,8 +4,8 @@ import datetime
 # Create your views here.
 from django.utils import timezone
 
-EXPIRE_TIMER = datetime.timedelta(hours=24)
-
+#EXPIRE_TIMER = datetime.timedelta(hours=24)
+EXPIRE_TIMER = datetime.timedelta(minutes=2)
 
 def home_view(request):
     return render(request,'index.html', {})
@@ -27,9 +27,12 @@ def product_view(request, barcode):
         if barcode_data.last_updated + EXPIRE_TIMER < timezone.now():
             resp = request_barcode_data(barcode)
             
-            CacheBarcode.objects.update(barcode=barcode, data=resp[0])
-            barcode_data = CacheBarcode.objects.get(barcode=barcode)
+            barcode_data = CacheBarcode.objects.get_or_create(barcode=barcode)
+            barcode_data.data = resp[0]
             barcode_data.save()
+            #CacheBarcode.objects.update(barcode=barcode, data=resp[0])
+            #barcode_data = CacheBarcode.objects.get(barcode=barcode)
+            #barcode_data.save()
             print('product: ', barcode_data.barcode, ' found in cached but updated')
         else:
             print('product: ', barcode_data.barcode, ' found and used from cached')
