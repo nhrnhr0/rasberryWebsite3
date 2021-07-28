@@ -1,6 +1,11 @@
 
 
+# PI SSH
+## set up
+    cd Desktop/
+    git clone https://github.com/nhrnhr0/rasberryWebsite3.git
+    ./rasberryWebsite3/setup/setup.sh
 
-sudo crontab -e
-add this line:
-@reboot python3 /home/pi/Desktop/rasberryWebsite3/setup/open_chromoim_on_startup.py
+## update
+    git pull
+    ./rasberryWebsite3/setup/update.sh

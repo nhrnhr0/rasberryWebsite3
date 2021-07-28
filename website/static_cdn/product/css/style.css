@@ -51,7 +51,7 @@ body {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: auto;
   max-width: 80vw;
   max-height: calc(100vh-300px);
@@ -64,6 +64,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.main .content .no-barcode {
+  text-align: center;
 }
 
 .main .content .details {

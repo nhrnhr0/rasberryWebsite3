@@ -18,17 +18,15 @@ def product_view(request, barcode):
     barcode_data = None
     if(len(cached) == 0):
         resp = request_barcode_data(barcode)
-        print(resp)
-        if resp != []:
-            barcode_data = CacheBarcode.objects.create(barcode=barcode, data=resp[0])
-            print('product: ', barcode_data.barcode, ' requested from the server and saved')
+        barcode_data = CacheBarcode.objects.create(barcode=barcode, data=resp)
+        print('product: ', barcode_data.barcode, ' requested from the server and saved')
     else:
         barcode_data = cached.first()
         if barcode_data.last_updated + EXPIRE_TIMER < timezone.now():
             resp = request_barcode_data(barcode)
             
-            barcode_data = CacheBarcode.objects.get_or_create(barcode=barcode)
-            barcode_data.data = resp[0]
+            barcode_data,created = CacheBarcode.objects.get_or_create(barcode=barcode)
+            barcode_data.data = resp
             barcode_data.save()
             #CacheBarcode.objects.update(barcode=barcode, data=resp[0])
             #barcode_data = CacheBarcode.objects.get(barcode=barcode)
@@ -37,10 +35,13 @@ def product_view(request, barcode):
         else:
             print('product: ', barcode_data.barcode, ' found and used from cached')
     print(BarcodeScanHit.objects.create(barcode=barcode_data))
+        
     return render(request, 'product.html', {'data':barcode_data})
 
 
 def request_barcode_data(barcode):
     response = requests.get(f'https://test.ms-global.co.il/api/barcode/{barcode}/')
     resp = response.json()
-    return resp
+    if(resp == []):
+        return None
+    return resp[0]

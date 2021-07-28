@@ -17,8 +17,11 @@
             <div class="logo"><img src="{%static 'product/imgs/logo_ms.png'%}" alt="אמ. אס. גלובל"></div>
         </div>
         <div class="content">
-            {% if data == None %}
-                ברקוד לא נמצא במערכת
+            {% if data.data == None %}
+                <div class="no-barcode">
+                    <h2>ברקוד לא נמצא במערכת</h2>
+                    <h3>נסה לסרוק אותו שוב או נסה ברקוד אחר</h3>
+                </div>
             {%else%}
             <div class="details">
                 <h1 class="title">{{data.data.catalog_images.0.title}}</h1>
