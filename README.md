@@ -7,5 +7,6 @@
     ./rasberryWebsite3/setup/setup.sh
 
 ## update
-    git pull
-    ./rasberryWebsite3/setup/update.sh
+    cd /home/pi/Desktop/rasberryWebsite3/
+    sudo git pull
+    ./setup/update.sh
