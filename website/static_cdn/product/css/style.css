@@ -43,7 +43,11 @@ body {
       justify-content: space-around;
 }
 
-.main .header .logo {
+.main .header .logo.ms {
+  width: 270px;
+}
+
+.main .header .logo.md {
   width: 150px;
 }
 

@@ -42,7 +42,12 @@ body {
         align-items: center;
         justify-content: space-around;
         .logo {
-            width: 150px;
+            &.ms {
+              width: 270px;
+            }
+            &.md {
+              width: 150px;
+            }
             img {
                 width: 100%;
                 height: 100%;
