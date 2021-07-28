@@ -14,7 +14,7 @@ body {
     vertical-align: baseline;
 }
 
-@font-face {
+/*@font-face {
     font-family: 'OpenSans';
     src: url("/static/index/fonts/opensanshebrew-extrabold-webfont.eot");
     src: url("/static/index/fonts/opensanshebrew-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("opensanshebrew-extrabold-webfont.woff") format("woff"), url("opensanshebrew-extrabold-webfont.ttf") format("truetype"), url("opensanshebrew-extrabold-webfont.svg#OpenSans") format("svg");
@@ -76,10 +76,11 @@ body {
     src: url("/static/index/fonts/opensanshebrew-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("/static/index/fonts/opensanshebrew-lightitalic-webfont.woff") format("woff"), url("/static/index/fonts/opensanshebrew-lightitalic-webfont.ttf") format("truetype"), url("/static/index/fonts/opensanshebrew-lightitalic-webfont.svg#OpenSans") format("svg");
     font-weight: lighter;
     font-style: italic;
-  }
+  }*/
   
   * {
-    font-family: 'OpenSans';
+    font-family: 'Rubik';
+    font-style: normal;
   }
   
   html {

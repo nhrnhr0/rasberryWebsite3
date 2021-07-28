@@ -13,72 +13,72 @@ body {
   vertical-align: baseline;
 }
 
-@font-face {
-  font-family: 'OpenSans';
-  src: url("/static/index/fonts/opensanshebrew-extrabold-webfont.eot");
-  src: url("/static/index/fonts/opensanshebrew-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("opensanshebrew-extrabold-webfont.woff") format("woff"), url("opensanshebrew-extrabold-webfont.ttf") format("truetype"), url("opensanshebrew-extrabold-webfont.svg#OpenSans") format("svg");
-  font-weight: bolder;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'OpenSans';
-  src: url("/static/index/fonts/opensanshebrew-bolditalic-webfont.eot");
-  src: url("/static/index/fonts/opensanshebrew-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("/static/index/fonts/opensanshebrew-bolditalic-webfont.woff") format("woff"), url("/static/index/fonts/opensanshebrew-bolditalic-webfont.ttf") format("truetype"), url("/static/index/fonts/opensanshebrew-bolditalic-webfont.svg#OpenSans") format("svg");
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'OpenSans';
-  src: url("/static/index/fonts/opensanshebrew-bold-webfont.eot");
-  src: url("/static/index/fonts/opensanshebrew-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/static/index/fonts/opensanshebrew-bold-webfont.woff") format("woff"), url("/static/index/fonts/opensanshebrew-bold-webfont.ttf") format("truetype"), url("/static/index/fonts/opensanshebrew-bold-webfont.svg#OpenSans") format("svg");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'OpenSans';
-  src: url("/static/index/fonts/opensanshebrew-light-webfont.eot");
-  src: url("/static/index/fonts/opensanshebrew-light-webfont.eot?#iefix") format("embedded-opentype"), url("/static/index/fonts/opensanshebrew-light-webfont.woff") format("woff"), url("/static/index/fonts/opensanshebrew-light-webfont.ttf") format("truetype"), url("/static/index/fonts/opensanshebrew-light-webfont.svg#OpenSans") format("svg");
-  font-weight: lighter;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'OpenSans';
-  src: url("/static/index/fonts/opensanshebrew-italic-webfont.eot");
-  src: url("/static/index/fonts/opensanshebrew-italic-webfont.eot?#iefix") format("embedded-opentype"), url("/static/index/fonts/opensanshebrew-italic-webfont.woff") format("woff"), url("/static/index/fonts/opensanshebrew-italic-webfont.ttf") format("truetype"), url("/static/index/fonts/opensanshebrew-italic-webfont.svg#OpenSans") format("svg");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'OpenSans';
-  src: url("/static/index/fonts/opensanshebrew-extrabolditalic-webfont.eot");
-  src: url("/static/index/fonts/opensanshebrew-extrabolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("/static/index/fonts/opensanshebrew-extrabolditalic-webfont.woff") format("woff"), url("/static/index/fonts/opensanshebrew-extrabolditalic-webfont.ttf") format("truetype"), url("/static/index/fonts/opensanshebrew-extrabolditalic-webfont.svg#OpenSans") format("svg");
-  font-weight: bolder;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'OpenSans';
-  src: url("/static/index/fonts/opensanshebrew-regular-webfont.eot");
-  src: url("/static/index/fonts/opensanshebrew-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/static/index/fonts/opensanshebrew-regular-webfont.woff") format("woff"), url("/static/index/fonts/opensanshebrew-regular-webfont.ttf") format("truetype"), url("/static/index/fonts/opensanshebrew-regular-webfont.svg#OpenSans") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'OpenSans';
-  src: url("/static/index/fonts/opensanshebrew-lightitalic-webfont.eot");
-  src: url("/static/index/fonts/opensanshebrew-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("/static/index/fonts/opensanshebrew-lightitalic-webfont.woff") format("woff"), url("/static/index/fonts/opensanshebrew-lightitalic-webfont.ttf") format("truetype"), url("/static/index/fonts/opensanshebrew-lightitalic-webfont.svg#OpenSans") format("svg");
-  font-weight: lighter;
-  font-style: italic;
-}
-
+/*@font-face {
+    font-family: 'OpenSans';
+    src: url("/static/index/fonts/opensanshebrew-extrabold-webfont.eot");
+    src: url("/static/index/fonts/opensanshebrew-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("opensanshebrew-extrabold-webfont.woff") format("woff"), url("opensanshebrew-extrabold-webfont.ttf") format("truetype"), url("opensanshebrew-extrabold-webfont.svg#OpenSans") format("svg");
+    font-weight: bolder;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'OpenSans';
+    src: url("/static/index/fonts/opensanshebrew-bolditalic-webfont.eot");
+    src: url("/static/index/fonts/opensanshebrew-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("/static/index/fonts/opensanshebrew-bolditalic-webfont.woff") format("woff"), url("/static/index/fonts/opensanshebrew-bolditalic-webfont.ttf") format("truetype"), url("/static/index/fonts/opensanshebrew-bolditalic-webfont.svg#OpenSans") format("svg");
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'OpenSans';
+    src: url("/static/index/fonts/opensanshebrew-bold-webfont.eot");
+    src: url("/static/index/fonts/opensanshebrew-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/static/index/fonts/opensanshebrew-bold-webfont.woff") format("woff"), url("/static/index/fonts/opensanshebrew-bold-webfont.ttf") format("truetype"), url("/static/index/fonts/opensanshebrew-bold-webfont.svg#OpenSans") format("svg");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'OpenSans';
+    src: url("/static/index/fonts/opensanshebrew-light-webfont.eot");
+    src: url("/static/index/fonts/opensanshebrew-light-webfont.eot?#iefix") format("embedded-opentype"), url("/static/index/fonts/opensanshebrew-light-webfont.woff") format("woff"), url("/static/index/fonts/opensanshebrew-light-webfont.ttf") format("truetype"), url("/static/index/fonts/opensanshebrew-light-webfont.svg#OpenSans") format("svg");
+    font-weight: lighter;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'OpenSans';
+    src: url("/static/index/fonts/opensanshebrew-italic-webfont.eot");
+    src: url("/static/index/fonts/opensanshebrew-italic-webfont.eot?#iefix") format("embedded-opentype"), url("/static/index/fonts/opensanshebrew-italic-webfont.woff") format("woff"), url("/static/index/fonts/opensanshebrew-italic-webfont.ttf") format("truetype"), url("/static/index/fonts/opensanshebrew-italic-webfont.svg#OpenSans") format("svg");
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'OpenSans';
+    src: url("/static/index/fonts/opensanshebrew-extrabolditalic-webfont.eot");
+    src: url("/static/index/fonts/opensanshebrew-extrabolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("/static/index/fonts/opensanshebrew-extrabolditalic-webfont.woff") format("woff"), url("/static/index/fonts/opensanshebrew-extrabolditalic-webfont.ttf") format("truetype"), url("/static/index/fonts/opensanshebrew-extrabolditalic-webfont.svg#OpenSans") format("svg");
+    font-weight: bolder;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'OpenSans';
+    src: url("/static/index/fonts/opensanshebrew-regular-webfont.eot");
+    src: url("/static/index/fonts/opensanshebrew-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/static/index/fonts/opensanshebrew-regular-webfont.woff") format("woff"), url("/static/index/fonts/opensanshebrew-regular-webfont.ttf") format("truetype"), url("/static/index/fonts/opensanshebrew-regular-webfont.svg#OpenSans") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'OpenSans';
+    src: url("/static/index/fonts/opensanshebrew-lightitalic-webfont.eot");
+    src: url("/static/index/fonts/opensanshebrew-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("/static/index/fonts/opensanshebrew-lightitalic-webfont.woff") format("woff"), url("/static/index/fonts/opensanshebrew-lightitalic-webfont.ttf") format("truetype"), url("/static/index/fonts/opensanshebrew-lightitalic-webfont.svg#OpenSans") format("svg");
+    font-weight: lighter;
+    font-style: italic;
+  }*/
 * {
-  font-family: 'OpenSans';
+  font-family: 'Rubik';
+  font-style: normal;
 }
 
 html {
