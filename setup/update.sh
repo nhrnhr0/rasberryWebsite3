@@ -14,3 +14,9 @@ echo '============ update supervisor:'
 sudo supervisorctl update
 sudo supervisorctl restart local_webserver
 sudo supervisorctl status
+echo 'execute this commands: '
+echo '============================================================='
+echo $PENV $WEBSITE_DIR/website/manage.py migrate
+echo 'sudo supervisorctl update'
+echo 'sudo supervisorctl restart'
+echo '============================================================='
