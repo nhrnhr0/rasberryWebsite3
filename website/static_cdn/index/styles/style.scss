@@ -248,7 +248,7 @@ body {
     }
 }
 
-.tab:nth-child(1) {
+.tab.barcode-tab {
     direction: rtl;
     .arrow{
         position: absolute;
@@ -286,7 +286,7 @@ body {
         }
     }
 }
-.tab:nth-child(2) {
+.tab.white-products-tab {
     .logo {
         //max-height: 15vh;
         flex: 1;
@@ -326,7 +326,7 @@ body {
     }
 }
 
-.tab:nth-child(3) {
+.tab.video-tab {
     background-color: black;
 
     .video {
@@ -341,7 +341,7 @@ body {
     }
 }
 
-.tab:nth-child(4) {
+.tab.black-products-tab {
     background-color: black;
 
     .logo {

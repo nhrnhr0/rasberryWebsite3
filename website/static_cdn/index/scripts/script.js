@@ -183,7 +183,8 @@ function tab3Show() {
 
 
 var last_tab_change_stemp;
-const TABS_TIMERS =[20000, 40000,50000,40000];// [40000,50000,40000];//[0,0,50000];////[0,0,50000];//
+                // barcode, swiper1, barcode, video, barcode, swiper2
+const TABS_TIMERS =[20000,  40000,   10000,   50000, 10000, 40000   ];// [40000,50000,40000];//[0,0,50000];////[0,0,50000];//
 const tabs = document.querySelectorAll('.tab');
 var current_tab_idx;
 function moveToTab(last, newTab) {
@@ -204,10 +205,10 @@ function moveToTab(last, newTab) {
         case 1:
             tab1Init();
             break;
-        case 2:
+        case 3:
             tab2Init();
             break;
-        case 3:
+        case 5:
             tab3Init();
             break;
     }
@@ -221,10 +222,10 @@ function moveToTab(last, newTab) {
             case 1:
                 tab1Show();
                 break;
-            case 2:
+            case 3:
                 tab2Show();
                 break;
-            case 3:
+            case 5:
                 tab3Show();
                 break;
         }
