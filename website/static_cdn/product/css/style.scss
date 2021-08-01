@@ -37,21 +37,21 @@ body {
     flex-direction: column;
     .header {
         flex:1;
+        max-height: 15vh;
         @include gold_gredient();
         display: flex;
         align-items: center;
         justify-content: space-around;
         .logo {
             &.ms {
-              width: 270px;
+              height: 80%;
             }
             &.md {
-              width: 150px;
+              height: 100%;
             }
             img {
                 width: 100%;
-                height: 100%;
-                    
+                height: 100%;  
             }
         }
     }
@@ -59,16 +59,24 @@ body {
         flex:2;
         font-size: 2rem;
         margin:auto;
-        max-width: 80vw;
-        max-height: calc(100vh-300px);
+        max-width: 100vw;
+        width: 80vw;
+        max-height: 83vh;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         .no-barcode {
           text-align: center;
         }
         .details {
-            flex: 1;
+            flex: 2;
+            hr {
+              margin: auto;
+            }
+            #product_title {
+              margin-top: 0px;
+              margin-bottom: 0px;
+            }
 
             .product-properties {
                 display: flex;
@@ -120,8 +128,11 @@ body {
             flex: 1;
             padding-top: 2%;
             padding-bottom: 2%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             .product-img {
-                
+                max-width: 500px;
                 width:100%;
                 height: 100%;
                 

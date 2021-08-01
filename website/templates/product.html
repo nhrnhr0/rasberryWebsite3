@@ -25,7 +25,7 @@
                 </div>
             {%else%}
             <div class="details">
-                <h1 class="title">{{data.data.catalog_images.0.title}}</h1>
+                <h1 id="product_title" class="title">{{data.data.catalog_images.0.title}}</h1>
                 <hr>
                 <div class="product-properties">
                     <div class="product-color-wraper">
@@ -57,11 +57,14 @@
 
         </div>
     </div>
+        <script src="{%static 'product/libs/fittext.js' %}"></script>
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
         <script>
             var data = `{{data.data.catalog_images.0.description}}`
             console.log(data);
             document.getElementById('description').innerHTML = marked(data);
+
+            window.fitText( document.getElementById("product_title"),1.1 ,{maxFontSize: '60px'} );
           </script>
 </body>
 </html>

@@ -110,10 +110,10 @@ function show_swiper() {
         speed:3000,//4000,
         spaceBetween: 0,
         
-        slidesPerView: "5",
+        slidesPerView: "4",
         autoplay: {
             delay:0,
-            reverseDirection:true,
+            reverseDirection:true, 
         }
     };
     swiper1_1 = new Swiper('#swiper1_1', swiper_settings);
@@ -184,7 +184,7 @@ function tab3Show() {
 
 var last_tab_change_stemp;
                 // barcode, swiper1, barcode, video, barcode, swiper2
-const TABS_TIMERS =[20000,  40000,   10000,   50000, 10000, 40000   ];// [40000,50000,40000];//[0,0,50000];////[0,0,50000];//
+const TABS_TIMERS =[20000,  40000,   10000,   50000, 10000, 40000   ];//[20000,  40000,   10000,   50000, 10000, 40000   ];// [40000,50000,40000];//[0,0,50000];////[0,0,50000];//
 const tabs = document.querySelectorAll('.tab');
 var current_tab_idx;
 function moveToTab(last, newTab) {

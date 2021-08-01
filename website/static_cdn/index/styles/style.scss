@@ -1,6 +1,6 @@
 :root {
     --fs-main: 3rem;
-    --fs-main-large: 6rem;
+    --fs-main-large: 4rem;
 }
 
 
@@ -187,7 +187,12 @@ body {
         align-items: center;
 
         .bullet {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-content: center;
 
+            
             // checklist animation one after the other
             &.animate {
                 &:nth-child(1) .wrapper svg .checkmark {
@@ -215,19 +220,23 @@ body {
             }
 
 
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: center;
-            align-content: center;
+            .text {
+                margin: auto;
+                flex: 1;
+            }
 
             .wrapper {
                 padding-left: 50px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex: 1;
+                flex: 2;
                 max-width: 90px;
                 width: 90px;
+                @media only screen and (max-width:1140px){
+                    width: 70px;
+                    max-width: 70px;
+                }
 
                 svg {
 
@@ -244,12 +253,23 @@ body {
 
 
             }
+
+
+            @media only screen and (max-width:1140px) {
+                font-size: 2.5rem;
+            }
         }
     }
 }
 
 .tab.barcode-tab {
     direction: rtl;
+    h1{
+        font-size: var(--fs-main-large);
+    }
+    h2 {
+        font-size: var(--fs-main);
+    }
     .arrow{
         position: absolute;
         top: 50%;
