@@ -10,6 +10,7 @@ echo 'sudo supervisorctl stop local_webserver'
 echo 'sudo git pull'
 echo $PIPENV install -r $WEBSITE_DIR/requirements.txt
 echo $PENV $WEBSITE_DIR/website/manage.py migrate
+echo $PENV $WEBSITE_DIR/website/manage.py migrate --database=online_db
 echo $PENV $WEBSITE_DIR/website/manage.py collectstatic
 echo 'sudo supervisorctl restart local_webserver'
 echo '================================================================='
