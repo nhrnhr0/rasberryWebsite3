@@ -17,7 +17,5 @@ class CacheBarcode(models.Model):
             title = str(self.data)
         return self.barcode + ' - ' + title
 
-class BarcodeScanHit(models.Model):
-    barcode = models.ForeignKey(to=CacheBarcode, on_delete=models.CASCADE)
-    timestemp = models.DateTimeField(auto_now_add=True)
+
 

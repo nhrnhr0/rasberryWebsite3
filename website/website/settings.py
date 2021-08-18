@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+from . import secrets
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-w%u=umuubp!l_up7e*fc$b4e)r-a13n#05i$m0)zbp@r5jpd2@'
+SECRET_KEY = secrets.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'online',
 ]
 
 MIDDLEWARE = [
@@ -78,9 +81,18 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    'online_db': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': secrets.DB_NAME,
+        'USER': secrets.DB_USER,
+        'PASSWORD': secrets.DB_PASSWORD,
+        'HOST': secrets.DB_HOST,
+        'PORT': secrets.DB_PORT
     }
 }
 
+DATABASE_ROUTERS = ['routers.db_routers.OnlineRouter']
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
