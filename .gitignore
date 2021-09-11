@@ -3,3 +3,5 @@ env
 *.sqlite3
 static
 secrets.py
+website/static_cdn/video/v2.mp4
+website/static_cdn/video/v1.mp4

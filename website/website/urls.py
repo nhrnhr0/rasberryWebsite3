@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,re_path
-from core.views import home_view, product_view
+from core.views import home_view, product_view, video_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home-view'),
-    re_path('^product/(?P<barcode>.+)/$', product_view, name='product-view')
+    re_path('^product/(?P<barcode>.+)/$', product_view, name='product-view'),
+    path('video', video_view, name='video-view')
 ]

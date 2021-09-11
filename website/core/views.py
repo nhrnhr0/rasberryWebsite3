@@ -10,7 +10,8 @@ EXPIRE_TIMER = datetime.timedelta(minutes=2)
 def home_view(request):
     return render(request,'index.html', {})
 
-
+def video_view(request):
+    return render(request, 'video.html', {})
 
 from core.models import CacheBarcode
 from online.models import BarcodeScanHit
